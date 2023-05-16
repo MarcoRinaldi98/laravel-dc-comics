@@ -1,17 +1,21 @@
 @extends('layouts.app')
 
 @section('page-title')
-    Fumetto: {{ }}
+    Fumetto: {{ $comic->id }}
 @endsection
 
 @section('content')
-    <img src="{{ $comic->thumb }}" class="img-fluid" alt="{{ $comic->title }}">
-    <h1>{{ $comic->title }}</h1>
-    <h2>{{ $comic->series }}</h2>
-    <h2>{{ $comic->type }}</h2>
-    <h3>Prezzo: {{ $comic->price }}</h3>
-    <small>Uscito il {{ $comic->sale_date }}</small>
-    <p>{{ $comic->description }}</p>
+    <div class="text-center">
+        <img src="{{ $comic->thumb }}" class="img-fluid pt-3" alt="{{ $comic->title }}">
+        <h2>{{ $comic->title }}</h2>
+        <div>
+            <span class="pe-5">{{ $comic->series }}</span>
+            <span class="ps-5">{{ $comic->type }}</span>
+        </div>
+        <h3>Prezzo: {{ $comic->price }} €</h3>
+        <small>Uscito il {{ $comic->sale_date }}</small>
+        <p class="fst-italic">{{ $comic->description }}</p>
 
-    <a href="{{ route('comics.index') }}" class="btn btn-secondary">Torna alla lista</a>
+        <a href="{{ route('comics.index') }}" class="btn btn-secondary mt-5">Torna alla lista</a>
+    </div>
 @endsection

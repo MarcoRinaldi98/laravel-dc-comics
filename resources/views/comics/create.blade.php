@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <h3 class="text-primary py-3">Modulo per l'inserimento di un nuovo fumetto:</h3>
     <form action="{{ route('comics.store') }}" method="POST">
 
         @csrf
