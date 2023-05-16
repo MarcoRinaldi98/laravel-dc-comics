@@ -9,7 +9,7 @@
         Crea nuovo fumetto
     </a>
 
-    <table class="table table-striped">
+    <table class="table table-striped mb-5">
         <thead>
             <tr class="text-primary">
                 <th scope="col">ID</th>

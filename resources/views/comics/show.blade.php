@@ -16,6 +16,6 @@
         <small>Uscito il {{ $comic->sale_date }}</small>
         <p class="fst-italic">{{ $comic->description }}</p>
 
-        <a href="{{ route('comics.index') }}" class="btn btn-secondary mt-5">Torna alla lista</a>
+        <a href="{{ route('comics.index') }}" class="btn btn-secondary my-5">Torna alla lista</a>
     </div>
 @endsection
