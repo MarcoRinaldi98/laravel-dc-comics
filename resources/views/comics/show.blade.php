@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('page-title')
-    Fumetto: {{ $comic->id }}
+    {{ $comic->title }}
 @endsection
 
 @section('content')
@@ -23,11 +23,13 @@
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-danger">
+                <button type="submit" class="btn btn-danger delete-btn">
                     Elimina
                 </button>
             </form>
         </div>
 
     </div>
+
+    @include('partials.delete-modal')
 @endsection

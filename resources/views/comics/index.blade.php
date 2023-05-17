@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Lista dei fumetti')
+@section('page-title', 'Lista fumetti')
 
 @section('content')
 
@@ -43,7 +43,7 @@
                             @csrf
                             @method('DELETE')
 
-                            <button type="submit" class="btn btn-danger">
+                            <button type="submit" class="btn btn-danger delete-btn">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </form>
@@ -52,5 +52,5 @@
             @endforeach
         </tbody>
     </table>
-
+    @include('partials.delete-modal')
 @endsection

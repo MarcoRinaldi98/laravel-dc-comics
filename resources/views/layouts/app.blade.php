@@ -12,7 +12,7 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
     <!-- Titolo della Pagina -->
-    <title> @yield('page-title') </title>
+    <title> DC Comics | @yield('page-title') </title>
 </head>
 
 <body>
