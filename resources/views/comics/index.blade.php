@@ -29,14 +29,24 @@
                     <td>{{ $comic->series }}</td>
                     <td>{{ $comic->type }}</td>
                     <td class="text-success fw-semibold">{{ $comic->price }}</td>
-                    <td>
+                    <td class="d-flex">
                         <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">
-                            Info
+                            <i class="fa-solid fa-circle-info"></i>
                         </a>
 
-                        <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">
+                        <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning mx-2">
                             <i class="fa-solid fa-pen"></i>
                         </a>
+
+                        <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

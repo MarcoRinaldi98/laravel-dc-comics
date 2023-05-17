@@ -16,6 +16,18 @@
         <small>Uscito il {{ $comic->sale_date }}</small>
         <p class="fst-italic">{{ $comic->description }}</p>
 
-        <a href="{{ route('comics.index') }}" class="btn btn-secondary my-5">Torna alla lista</a>
+        <div class="d-flex justify-content-center py-5">
+            <a href="{{ route('comics.index') }}" class="btn btn-secondary me-2">Torna alla lista</a>
+            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+
+                @csrf
+                @method('DELETE')
+
+                <button type="submit" class="btn btn-danger">
+                    Elimina
+                </button>
+            </form>
+        </div>
+
     </div>
 @endsection
