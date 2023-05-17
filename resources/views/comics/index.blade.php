@@ -30,7 +30,13 @@
                     <td>{{ $comic->type }}</td>
                     <td class="text-success fw-semibold">{{ $comic->price }}</td>
                     <td>
-                        <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">Info</a>
+                        <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">
+                            Info
+                        </a>
+
+                        <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
                     </td>
                 </tr>
             @endforeach
