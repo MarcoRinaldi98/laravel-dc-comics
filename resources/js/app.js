@@ -7,18 +7,29 @@ import.meta.glob([
 
 const deleteBtns = document.querySelectorAll('.delete-btn');
 
-deleteBtns.forEach((btn) => {
-    btn.addEventListener('click', (event) => {
+deleteBtns.forEach(btn => {
+    btn.addEventListener('click', event => {
         event.preventDefault();
-        const modal = new bootstrap.Modal(
-            document.getElementById('deleteModal')
-        );
+
+        const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        modal.show();
+
         document.getElementById('delete').addEventListener('click', () => {
             btn.parentElement.submit();
         });
-        document.getElementById('close-modal').addEventListener('click', () => {
-            modal.hide();
-        });
-        modal.show();
     });
 });
+
+/* Versione con confirm()
+deleteBtns.forEach(btn => {
+    btn.addEventListener('click', event => {
+        event.preventDefault();
+
+        const userResponse = confirm("Sei sicuro di voler eliminare l'elemento selezionato?");
+
+        if (userResponse) {
+            btn.parentElement.submit();
+        }
+    });
+});
+*/

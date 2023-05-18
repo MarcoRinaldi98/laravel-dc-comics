@@ -6,10 +6,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Vuoi eliminare il fumetto?</p>
+                <p>Vuoi eliminare il fumetto selezionato?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-modal">No</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                 <button type="button" class="btn btn-danger" id="delete">Si</button>
             </div>
         </div>
