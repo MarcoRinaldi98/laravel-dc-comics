@@ -71,8 +71,10 @@
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Genere: </label>
-            <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type"
-                value="{{ old('type') }}">
+            <select class="form-select @error('type') is-invalid @enderror" id="type" name="type">
+                <option @selected(old('type') == 'comic-book') value="comic-book">comic book</option>
+                <option @selected(old('type') == 'graphic-novel') value="graphic-novel">grapic novel</option>
+            </select>
             @error('type')
                 <div class="invalid-feedback">
                     {{ $message }}
